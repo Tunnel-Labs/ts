@@ -1,0 +1,27 @@
+{
+	"name": "@tunnel/ts",
+	"version": "0.0.0",
+	"type": "module",
+	"files": [".build"],
+	"main": "./.build/main.cjs",
+	"module": "./.build/main.mjs",
+	"types": "./.build/main.d.ts",
+	"exports": {
+		"require": {
+				"types": "./.build/main.d.cts",
+				"default": "./.build/main.cjs"
+		},
+		"import": {
+				"types": "./.build/main.d.mts",
+				"default": "./.build/main.mjs"
+		}
+	},
+	"scripts": {
+		"build": "unbuild"
+	},
+	"devDependencies": {
+		"@types/node": "^20.11.20",
+		"typescript": "^5.3.3",
+		"unbuild": "^2.0.0"
+	}
+}
